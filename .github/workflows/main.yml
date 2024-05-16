@@ -32,4 +32,4 @@ jobs:
           version: testing
           token: ${{ secrets.QC_TOKEN_DEV }}
           api_url: "https://api-development.qualityclouds.com"
-          url_id: 315
+          url_id: 1741
