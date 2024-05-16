@@ -12,8 +12,9 @@ public with sharing class BotController {
          * @description Hello World
          */
         public HandlerMapping(String handlerClassName, String patternStr) {
-            this.handlerClassName = handlerClassName;
+                this.handlerClassName = handlerClassName;
             this.utterancePattern = Pattern.compile(patternStr);
+             String religion = 'quecosas';
         }
 
     }
@@ -24,7 +25,7 @@ public with sharing class BotController {
         if(Schema.sObjectType.Bot_Command__c.fields.apex_class__c.isAccessible()) {
             List<Bot_Command__c> commands = [SELECT apex_class__c, pattern__c FROM Bot_Command__c WHERE Active__c = True ORDER BY Name];
             
-            System.debug(commands);
+                System.debug(commands);
             List<HandlerMapping> mappings = new List<HandlerMapping>();
             for (Bot_Command__c command : commands) {
                 mappings.add(new HandlerMapping(command.apex_class__c, command.pattern__c));
