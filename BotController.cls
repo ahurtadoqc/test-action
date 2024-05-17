@@ -15,6 +15,7 @@ public with sharing class BotController {
                 this.handlerClassName = handlerClassName;
             this.utterancePattern = Pattern.compile(patternStr);
             String religion = 'quecosas';
+            String religion2 = 'quecosas';
         }
 
     }
